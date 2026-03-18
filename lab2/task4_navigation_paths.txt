@@ -1,0 +1,29 @@
+=== Task 4: Navigation with Paths ===
+--- Absolute path to HR/policies ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/hr/policies
+leave_policy.txt
+remote_work.txt
+--- Up to hr/ ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/hr
+--- Relative path to onboarding/ ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/hr/onboarding
+checklist.txt
+welcome_guide.txt
+--- Sideways to engineering/frontend/ ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/engineering/frontend
+app_config.txt
+index.html
+styles.css
+--- Up two levels to techcorp/ ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp
+--- Absolute path to marketing/campaigns/ ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/marketing/campaigns
+q1_launch.txt
+social_media.txt
+--- cd - (back to previous directory) ---
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp
+/usr/bin
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/marketing/assets
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab2/techcorp/hr/onboarding
+checklist.txt
+welcome_guide.txt

@@ -1,0 +1,51 @@
+/home/chivinthera
+total 76
+drwxr-x--- 16 chivinthera chivinthera 4096 Mar 17 14:20 .
+drwxr-xr-x  3 root        root        4096 Mar 13 14:38 ..
+-rw-------  1 chivinthera chivinthera    0 Mar 13 15:18 .bash_history
+-rw-r--r--  1 chivinthera chivinthera  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 chivinthera chivinthera 3771 Mar 31  2024 .bashrc
+drwx------  8 chivinthera chivinthera 4096 Mar 13 14:59 .cache
+drwx------ 13 chivinthera chivinthera 4096 Mar 17 14:27 .config
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Desktop
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Documents
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Downloads
+drwx------  4 chivinthera chivinthera 4096 Mar 13 14:38 .local
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Music
+-rw-rw-r--  1 chivinthera chivinthera    0 Mar 17 14:20 os-se-
+drwxrwxr-x  4 chivinthera chivinthera 4096 Mar 17 13:55 os-se-p20240019
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Pictures
+-rw-r--r--  1 chivinthera chivinthera  807 Mar 31  2024 .profile
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Public
+drwx------  5 chivinthera chivinthera 4096 Mar 13 15:00 snap
+drwx------  2 chivinthera chivinthera 4096 Mar 13 14:38 .ssh
+-rw-r--r--  1 chivinthera chivinthera    0 Mar 13 15:09 .sudo_as_admin_successful
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Templates
+drwxr-xr-x  2 chivinthera chivinthera 4096 Mar 13 14:38 Videos
+--- Root directory (/) ---
+/
+bin
+bin.usr-is-merged
+boot
+cdrom
+dev
+etc
+home
+lib
+lib64
+lib.usr-is-merged
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+sbin.usr-is-merged
+snap
+srv
+sys
+tmp
+usr
+var
