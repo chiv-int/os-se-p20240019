@@ -157,7 +157,7 @@ Screenshot of running on Windows:
 
 <!-- Screenshot of `strace -c` output for both versions -->
 ![strace summary - Library](screenshots/strace_summary_lib.png)
-![strace summary - Syscall](screenshots/strace_summary_sys.png)
+![strace summary - Syscall](screenshots/strace_summary_reader.png)
 
 ### Questions
 
@@ -173,7 +173,7 @@ Screenshot of running on Windows:
 
    > just one 
    ```write(3, "Hello from Operating Systems cla"..., 36) = 36```
-   
+
 4. **In your own words, what is the real difference between a library function and a system call?**
 
    > A library function runs in user space and adds convenience like  error handling. A system call is a direct request to the kernel. 
