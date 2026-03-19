@@ -111,7 +111,7 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 
 Screenshot of running on Windows:
 
-![Task 1 - Windows](screenshots/task1_win.png)
+![Task 1 - Windows](screenshots/file_creator_win.png)
 
 ### Bonus Questions
 
@@ -132,8 +132,7 @@ Screenshot of running on Windows:
 ## Task 3: strace Analysis
 
 **Describe what you observed:** [What surprised you about the strace output? How many more system calls did the library version make?]
-> The library version made a lot more system calls than I expected. The syscall version only made the calls I wrote myself. I was surprised that even a simple program using the library triggers so many extra calls like mmap and brk just to start up.
-
+> The library version made a lot more system calls than I expected. The syscall version only made the calls I wrote myself. I was surprised that the library version triggered extra openat and read calls just to load libc.so before doing anything. The syscall version only made the calls I wrote myself.
 ### strace Output — Library Version (File Creator)
 
 <!-- Screenshot: strace -e trace=openat,read,write,close ./file_creator_lib -->
@@ -168,15 +167,16 @@ Screenshot of running on Windows:
 
 2. **What extra system calls appear in the library version? What do they do?**
 
-   > [brk — allocates heap memory for the library. mmap — maps memory regions. fstat — checks file metadata. These run automatically when the C library loads.
+   > The library version showed extra openat and read calls to load libc.so.before the program even ran. These load the shared C library automatically. The syscall version had none of these — it only made the calls I wrote.
 
 3. **How many `write()` calls does `fprintf()` actually produce?**
 
-   > Usually just 1, because fprintf() buffers everything and flushes at once.
-
+   > just one 
+   ```write(3, "Hello from Operating Systems cla"..., 36) = 36```
+   
 4. **In your own words, what is the real difference between a library function and a system call?**
 
-   > A library function runs in user space and adds convenience like buffering and error handling. A system call is a direct request to the kernel. Library functions often call system calls internally.
+   > A library function runs in user space and adds convenience like  error handling. A system call is a direct request to the kernel. 
 
 ---
 
