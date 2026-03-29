@@ -1,0 +1,15 @@
+--- Challenge GRUB ---
+
+=== 3a: GRUB_DEFAULT Change ===
+Changed GRUB_DEFAULT from 0 to 1 so the second menu entry (Advanced options for Ubuntu) boots by default.
+GRUB_DEFAULT=1
+
+=== 3b: Color Scheme Applied ===
+GRUB_COLOR_NORMAL="light-gray/black"
+GRUB_COLOR_HIGHLIGHT="yellow/blue"
+
+=== 3c: Root Partition UUID ===
+UUID: ee22466f-da76-4763-bbef-f7d82b4191c7
+
+=== How GRUB uses UUID ===
+GRUB uses the UUID to identify the root filesystem independently of device names (like /dev/sda). This ensures the correct partition is mounted even if drive order changes.
