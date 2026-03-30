@@ -1,0 +1,20 @@
+  502  sudo sed -i 's/set menu_color_highlight=.*/set menu_color_highlight=yellow\/blue/' /boot/grub/grub.cfg
+  503  sudo grep "menu_color" /boot/grub/grub.cfg
+  504  sudo reboot
+  505  sudo cat /etc/grub.d/05_debian_theme
+  506  sudo grep -n "menu_color\|COLOR_NORMAL\|COLOR_HIGHLIGHT" /etc/grub.d/05_debian_theme
+  507  sudo sed -i '34s/.*/                        echo "${1}set menu_color_normal=light-gray\/black"/' /etc/grub.d/05_debian_theme
+  508  sudo sed -i '35s/.*/                        echo "${1}set menu_color_highlight=yellow\/blue"/' /etc/grub.d/05_debian_theme
+  509  sudo sed -i '48s/.*/                        echo "${1}set menu_color_normal=light-gray\/black"/' /etc/grub.d/05_debian_theme
+  510  sudo sed -i '49s/.*/                        echo "${1}set menu_color_highlight=yellow\/blue"/' /etc/grub.d/05_debian_theme
+  511  sudo grep -n "menu_color" /etc/grub.d/05_debian_theme
+  512  sudo update-grub
+  513  reboot
+  514  git pull
+  515  git add task3_strace/strace_lib_task1.txt task3_strace/strace_sys_task1.txt
+  516  git push 
+  517  cd os-class-activities-p20240019/
+  518  cd activity2
+  519  cd task1/
+  520  ps -ef --forest | grep forkchild
+  521  history | tail -n 20 > command_used_forkchild.txt
