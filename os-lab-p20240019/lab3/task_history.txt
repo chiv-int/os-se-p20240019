@@ -1,0 +1,40 @@
+  170  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  201  echo "" >> ~/os-se-<YourStudentID>/os-lab-<YourStudentID>/lab3/task3_grub.txt
+  202  echo "" >> ~/os-se-<p20240019>/os-lab-<p20240019>/lab3/task3_grub.txt
+  203  echo "" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  204  echo "=== Part B: GRUB Customization ===" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  205  echo "--- Modified /etc/default/grub ---" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  206  cat /etc/default/grub >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  212  echo "" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  213  echo "--- Custom script /etc/grub.d/40_custom_techcorp ---" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  214  cat /etc/grub.d/40_custom_techcorp >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  216  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  220  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  223  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  229  echo "" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  230  echo "--- Custom script /etc/grub.d/40_custom_techcorp ---" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  231  cat /etc/grub.d/40_custom_techcorp >> ~/os-se-p20240019/o-lab-p20240019/lab3/task3_grub.txt
+  233  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  238  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  243  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  255  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  268  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  281  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  282  echo "" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  283  echo "--- Final /etc/default/grub (with background) ---" >> ~/os-se-p20240019/os-labp20240019/lab3/task3_grub.txt
+  284  echo "--- Final /etc/default/grub (with background) ---" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  285  cat /etc/default/grub >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  287  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  292  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  299  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  300  echo "" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  301  echo "=== Part C: Boot Recovery ===" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  302  echo "Boot recovery successful on $(date)" >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  303  uname -r >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  304  uptime >> ~/os-se-p20240019/os-lab-p20240019/lab3/task3_grub.txt
+  321  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  350  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  398  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  556  cd /home/chivinthera/os-se-p20240019/os-lab-p20240019/lab3
+  557  cat ~/os-se-p20240019/os-lab-p20240019/lab3/task_history.txt
+  558  history | grep "lab3" > ~/os-se-p20240019/os-lab-p20240019/lab3/task_history.txt
