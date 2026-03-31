@@ -1,0 +1,20 @@
+  532  ./forkchild > result_forkchild.txt 2>&1
+  533  cat result_forkchild.txt
+  534  clear 
+  535  cd os-class-activities-p20240019/
+  536  cd activity2
+  537  cd task1/
+  538  gcc -o forkchild forkchild.c
+  539  ./forkchild > result_forkchild.txt 2>&1
+  540  cat result_forkchild.txt
+  541  clear
+  542  git pull
+  543  cd /home/chivinthera/os-se-p20240019/os-class-activities-p20240019/activity2/task3_shm
+  544  gcc -o shm-producer shm-producer.c -lrt
+  545  clear
+  546  gcc -o shm-producer shm-producer.c -lrt
+  547  gcc -o shm-consumer shm-consumer.c -lrt
+  548  ./shm-producer
+  549  ./shm-consumer > result-shm-ipc.txt
+  550  cat result-shm-ipc.txt
+  551  history | tail -n 20 > command_used_shm.txt
