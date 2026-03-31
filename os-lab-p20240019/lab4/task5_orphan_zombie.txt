@@ -1,0 +1,18 @@
+=== Task 5: Orphan & Zombie Processes ===
+--- Orphan process observation ---
+Child PID: 14868, Original PPID: 14866, New PPID after parent exit: 1819
+--- Zombie process observation ---
+Zombie PID: 16550, State: Z (zombie/defunct), Parent PID: 16541
+--- Zombie and Orphan Cleanup Notes ---
+Q: How are orphans cleaned up? A: Orphans are automatically adopted by systemd (PID 1), which becomes their new parent and cleans them up when they finish.
+Q: How are zombies cleaned up? A: Zombies are cleaned up when the parent process calls wait() to read the child exit status, or when the parent process itself dies and systemd reaps them.
+Q: Can you kill a zombie with 'kill -9'? Why or why not? A: No, because a zombie is already dead. It is just an entry in the process table waiting for the parent to read its exit status. kill -9 only works on running processes.
+--- Challenge Orphan & Zombie ---
+5a: After parent calls wait(), zombie disappears from process table
+chivint+   17722  0.0  0.0   2692  1668 pts/1    S    19:46   0:00  |   |       |   \_ ./three_children
+chivint+   17724  0.0  0.0   2692  1000 pts/1    S    19:46   0:00  |   |       |       \_ ./three_children
+chivint+   17725  0.0  0.0   2692  1000 pts/1    S    19:46   0:00  |   |       |       \_ ./three_children
+chivint+   17726  0.0  0.0   2692  1000 pts/1    S    19:46   0:00  |   |       |       \_ ./three_children
+chivint+   17921  0.0  0.0   9288  2336 pts/2    S+   19:47   0:00  |   |           \_ grep --color=auto three_children
+chivint+   18136  0.0  0.0   9288  2336 pts/2    S+   19:49   0:00  |   |       |   \_ grep --color=auto three_children
+5b: Parent PID 17722 created 3 children: 17724, 17725, 17726
