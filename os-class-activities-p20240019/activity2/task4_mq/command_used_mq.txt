@@ -1,0 +1,20 @@
+  555  cd task4_mq/
+  556  clear
+  557  gcc -o sender sender.c -lrt
+  558  gcc -o receiver receiver.c -lrt
+  559  clear
+  560  gcc -o sender sender.c -lrt
+  561  gcc -o receiver receiver.c -lrt
+  562  pwd
+  563  ls
+  564  clear
+  565  gcc -o sender sender.c -lrt
+  566  gcc -o receiver receiver.c -lrt
+  567  ./sender
+  568  ./receiver > result-mq-ipc.txt
+  569  cat result-mq-ipc.txt
+  570  cd ..
+  571  git add
+  572  git add .\
+  573  git add .
+  574  history | tail -n 20 > command_used_mq.txt
