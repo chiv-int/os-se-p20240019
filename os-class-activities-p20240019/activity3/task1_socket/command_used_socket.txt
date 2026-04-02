@@ -1,0 +1,20 @@
+  882  clear
+  883  cat ~/.bash_history | grep lab4
+  884  history | grep lab4 > lab4_history.txt
+  885  clear
+  886  history -a
+  887  git pull
+  888  cd os-class-activities-p20240019/
+  889  cd activity3
+  890  cd task1_socket
+  891  clear
+  892  $ gcc -o server server.c
+  893  $ gcc -o client client.c
+  894  gcc -o client client.c
+  895  clear
+  896  gcc -o client client.c
+  897  ./server
+  898  clear
+  899  gcc -o server server.c
+  900  ./server
+  901  history | tail -n 20 > command_used_socket.txt
