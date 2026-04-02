@@ -50,6 +50,7 @@ Show your VM's snapshot panel confirming the "Before Boot Lab" snapshot was crea
 
 <!-- Insert your screenshot below: -->
 ![Task 3 Snapshot](images/task3_snapshot.png)
+![Task 3 Snapshot](images/task3_snapshot2.png)
 
 ---
 
@@ -113,6 +114,7 @@ Show the output of `ls -la /boot/grub/grub.cfg` and `head -5 /boot/grub/grub.cfg
 
 <!-- Insert your screenshot below: -->
 ![Task 3 Restored](images/task3_restored.png)
+![Task 3 Restored](images/task3_restored2.png)
 
 ---
 
@@ -121,7 +123,7 @@ Show the output of `ls -la /boot/grub/grub.cfg` and `head -5 /boot/grub/grub.cfg
 Show the GRUB menu with your custom color scheme (challenge 3b) and the `grep` output for the root partition UUID (challenge 3c).
 
 <!-- Insert your screenshot below: -->
-![Task 3 Challenge](images/task3_challenge.png)
+![Task 3 Challenge](images/task3_challenge.jpg)
 
 ---
 
