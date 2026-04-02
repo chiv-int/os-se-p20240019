@@ -28,7 +28,7 @@
 
 5. **Socket call sequence diagram:**
 
-  ```
+ ```
    SERVER                          CLIENT
   |                               |
 socket()                        socket()
@@ -48,7 +48,7 @@ send() ------> recv() -----------+
   |                               |
 close()                         close()
   |                               |
-  ```
+```
 
 ---
 
@@ -113,7 +113,20 @@ _(Include output or screenshot)_
 
 ### Linux — `ps -eLf` Output
 
-_(Paste the relevant ps output here)_
+```
+UID        PID  PPID   LWP  C NLWP STIME TTY      TIME     CMD
+chivint+  8638  4275  8638  0    5 17:34 pts/0    00:00:00 ./threads_observe
+chivint+  8638  4275  8640  0    5 17:34 pts/0    00:00:00 ./threads_observe
+chivint+  8638  4275  8641  0    5 17:34 pts/0    00:00:00 ./threads_observe
+chivint+  8638  4275  8642  0    5 17:34 pts/0    00:00:00 ./threads_observe
+chivint+  8638  4275  8643  0    5 17:34 pts/0    00:00:00 ./threads_observe
+--- /proc/11066/task/ listing ---
+11066
+11067
+11068
+11069
+11070
+```
 
 ### Linux — htop Thread View
 
