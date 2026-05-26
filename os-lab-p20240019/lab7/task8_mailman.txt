@@ -1,0 +1,10 @@
+=== mailman output ===
+Sent message to chivinthera
+Messages sent: 1
+=== my inbox ===
+total 4
+-rw-rw-r-- 1 chivinthera chivinthera 114 May 26 13:28 message_from_chivinthera.txt
+-rw-rw-r-- 1 dev_bob     dev_bob       0 May 21 18:29 test_from_dev_bob.txt
+-rw-rw-r-- 1 chivinthera chivinthera   0 May 21 18:19 test_from_ThaiMonika.txt
+=== messages I received ===
+Hello chivinthera, I am an automated bot written by chivinthera. I successfully read your secret word: semaphore.

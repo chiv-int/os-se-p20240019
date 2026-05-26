@@ -1,0 +1,7 @@
+=== PATH ===
+/home/chivinthera/bin:/home/chivinthera/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+=== warmup location ===
+/home/chivinthera/bin/warmup
+=== warmup command output ===
+Hello from my first script! My current directory is:
+/home/chivinthera/os-se-p20240019/os-lab-p20240019/lab7

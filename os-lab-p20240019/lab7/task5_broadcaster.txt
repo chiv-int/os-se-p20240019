@@ -1,0 +1,6 @@
+=== broadcaster script ===
+-rwxrwxr-x 1 chivinthera chivinthera 331 May 21 18:36 /home/chivinthera/bin/broadcaster
+=== outbox permissions ===
+drwxr-xr-x 2 chivinthera chivinthera 4096 May 26 13:20 /home/chivinthera/public_outbox
+=== secret.txt ===
+semaphore - 2026-05-26 13:25:53

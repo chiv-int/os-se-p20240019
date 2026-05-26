@@ -1,0 +1,6 @@
+=== guestbook permissions ===
+-rw-rw-r-- 1 chivinthera chivinthera 35 May 26 13:10 /home/chivinthera/guestbook.txt
+=== sign_book permissions ===
+-rwsr-xr-x 1 chivinthera chivinthera 16136 May 26 10:17 /home/chivinthera/bin/sign_book
+=== guestbook contents ===
+Visitor signed: Hello from dev_bob

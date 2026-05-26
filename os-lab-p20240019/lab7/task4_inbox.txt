@@ -1,0 +1,6 @@
+=== inbox permissions ===
+drwx-wx-wx 2 chivinthera chivinthera 4096 May 21 18:29 /home/chivinthera/public_inbox
+=== inbox files as owner ===
+total 0
+-rw-rw-r-- 1 dev_bob     dev_bob     0 May 21 18:29 test_from_dev_bob.txt
+-rw-rw-r-- 1 chivinthera chivinthera 0 May 21 18:19 test_from_ThaiMonika.txt
