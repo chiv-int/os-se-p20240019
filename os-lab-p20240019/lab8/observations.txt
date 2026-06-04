@@ -1,0 +1,14 @@
+Run 1 final inventory: -2
+Run 2 final inventory: -2
+Run 3 final inventory: -2
+Run 4 final inventory: -2
+Run 5 final inventory: -2
+
+Explanation:
+The inventory values are inconsistent and go negative because of a TOC-TOU (Time-of-Check 
+to Time-of-Use) vulnerability. When 50 bots run concurrently, multiple processes read the 
+same inventory value at the same time before any of them writes the updated value back. 
+This means several bots can all see enough inventory available, subtract their quantity, 
+and write back incorrect values — even going below zero. The OS process scheduler decides 
+the order processes run, so multiple processes pass the inventory check simultaneously 
+before any update is written, causing the final count to be wrong every time.
