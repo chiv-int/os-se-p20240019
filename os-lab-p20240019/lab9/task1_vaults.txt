@@ -1,0 +1,11 @@
+=== working folder ===
+/home/se-chiv-inthera/os-lab-deadlock
+=== vault directories ===
+drwxrwxr-x 2 se-chiv-inthera se-chiv-inthera 4096 Jun  9 13:58 /home/se-chiv-inthera/os-lab-deadlock/vault_alpha
+drwxrwxr-x 2 se-chiv-inthera se-chiv-inthera 4096 Jun  9 13:58 /home/se-chiv-inthera/os-lab-deadlock/vault_beta
+=== vault lock files ===
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 0 Jun  9 13:58 /home/se-chiv-inthera/os-lab-deadlock/vault_alpha/vault.lock
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 0 Jun  9 13:58 /home/se-chiv-inthera/os-lab-deadlock/vault_beta/vault.lock
+=== vault marker files ===
+Vault Alpha local resource for p20240019
+Vault Beta local resource for p20240019

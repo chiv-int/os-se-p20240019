@@ -1,0 +1,16 @@
+=== global ordering rule ===
+All scripts lock Alpha before Beta.
+=== my role script order (Player A - se-chiv-inthera) ===
+echo "cross_sync_alpha: waiting for local Alpha"
+echo "cross_sync_alpha: locked local Alpha"
+echo "cross_sync_alpha: waiting for partner Beta"
+echo "cross_sync_alpha: locked partner Beta"
+=== partner script order (Player B - se-kiv-sovannlyda) ===
+cross_sync_beta: waiting for partner Alpha
+cross_sync_beta: locked partner Alpha
+cross_sync_beta: waiting for local Beta
+cross_sync_beta: locked local Beta
+=== result ===
+Both cross-site scripts completed without deadlock.
+Player A: se-chiv-inthera (p20240019)
+Player B: se-kiv-sovannlyda (p20240001)

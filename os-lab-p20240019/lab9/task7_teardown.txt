@@ -1,0 +1,15 @@
+=== teardown script ===
+-rwxrwxr-x 1 se-chiv-inthera se-chiv-inthera 330 Jun  9 14:15 /home/se-chiv-inthera/bin/teardown
+=== process check ===
+se-sath+  737890  0.0  0.0   7340  3672 pts/12   S+   14:08   0:00 /bin/bash /home/se-sathya-poch/bin/sync_down
+se-sath+  738335  0.0  0.0   7340  3664 pts/19   S+   14:08   0:00 /bin/bash /home/se-sathya-poch/bin/sync_up
+se-song+  741862  0.0  0.0   7340  3680 pts/28   S+   14:14   0:00 /bin/bash /home/se-song-phengroth/bin/sync_up
+se-song+  741870  0.0  0.0   7340  3640 pts/6    S+   14:14   0:00 /bin/bash /home/se-song-phengroth/bin/sync_down
+=== final working folder ===
+/home/se-chiv-inthera/os-lab-deadlock
+/home/se-chiv-inthera/os-lab-deadlock/vault_alpha
+/home/se-chiv-inthera/os-lab-deadlock/vault_alpha/README.txt
+/home/se-chiv-inthera/os-lab-deadlock/vault_alpha/vault.lock
+/home/se-chiv-inthera/os-lab-deadlock/vault_beta
+/home/se-chiv-inthera/os-lab-deadlock/vault_beta/README.txt
+/home/se-chiv-inthera/os-lab-deadlock/vault_beta/vault.lock

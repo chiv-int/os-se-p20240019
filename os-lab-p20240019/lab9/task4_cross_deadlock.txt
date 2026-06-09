@@ -1,0 +1,13 @@
+=== public DR permissions ===
+drwxr-x--x 14 se-chiv-inthera se-chiv-inthera 4096 Jun  9 13:55 /home/se-chiv-inthera
+drwxrwxr-x  5 se-chiv-inthera se-chiv-inthera 4096 Jun  9 14:22 /home/se-chiv-inthera/os-lab-deadlock
+drwxr-xr-x  2 se-chiv-inthera se-chiv-inthera 4096 Jun  9 14:22 /home/se-chiv-inthera/os-lab-deadlock/public_dr_alpha
+total 0
+-rw-rw-rw- 1 se-chiv-inthera se-chiv-inthera 0 Jun  9 14:24 vault.lock
+=== running cross sync processes ===
+se-chiv+  746964  0.0  0.0   7340  3576 pts/18   S+   14:24   0:00 /bin/bash /home/se-chiv-inthera/bin/cross_sync_alpha
+se-kiv-+  746967  0.0  0.0   7340  3584 pts/7    S+   14:24   0:00 /bin/bash /home/se-kiv-sovannlyda/bin/cross_sync_beta
+se-song+  747670  100  0.1  33960 21780 pts/10   S+   14:25   0:00 /usr/bin/python3 /usr/lib/command-not-found -- cross_sync_beta
+=== partner role ===
+Partner username: se-kiv-sovannlyda
+My role: Player A
