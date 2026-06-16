@@ -1,0 +1,23 @@
+=== backup script permissions ===
+-rwxrwxr-x 1 se-chiv-inthera se-chiv-inthera 725 Jun 16 13:14 /home/se-chiv-inthera/bin/backup_project
+=== archives kept (should be 3) ===
+/home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131455.tar.gz
+/home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131454.tar.gz
+/home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131453.tar.gz
+=== backup log ===
+2026-06-16 13:14:52 | starting backup of /home/se-chiv-inthera/os-lab-automation/project
+2026-06-16 13:14:52 | created archive /home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131452.tar.gz
+2026-06-16 13:14:52 | no old archives to prune
+2026-06-16 13:14:52 | backup finished successfully
+2026-06-16 13:14:53 | starting backup of /home/se-chiv-inthera/os-lab-automation/project
+2026-06-16 13:14:53 | created archive /home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131453.tar.gz
+2026-06-16 13:14:53 | no old archives to prune
+2026-06-16 13:14:53 | backup finished successfully
+2026-06-16 13:14:54 | starting backup of /home/se-chiv-inthera/os-lab-automation/project
+2026-06-16 13:14:54 | created archive /home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131454.tar.gz
+2026-06-16 13:14:54 | no old archives to prune
+2026-06-16 13:14:54 | backup finished successfully
+2026-06-16 13:14:55 | starting backup of /home/se-chiv-inthera/os-lab-automation/project
+2026-06-16 13:14:55 | created archive /home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131455.tar.gz
+2026-06-16 13:14:55 | pruned old archive /home/se-chiv-inthera/os-lab-automation/backups/project_20260616_131452.tar.gz
+2026-06-16 13:14:55 | backup finished successfully
