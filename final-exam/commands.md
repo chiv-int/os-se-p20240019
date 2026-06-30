@@ -63,7 +63,20 @@ ls -l setuid_demo
 ```bash
 # make greeter runnable by name via PATH; record PATH + resolved location
 # run collector over your dirs; show it skips unreadable/missing files safely
-<your commands>
+nano greeter
+chmod +x greeter
+cp greeter ~/bin/
+greeter
+echo "PATH=$PATH" > path_report.txt
+which greeter >> path_report.txt
+mkdir -p data1 data2 data3
+echo "Report from data1" > data1/info.txt
+echo "Report from data2" > data2/info.txt
+echo "Secret report" > data1/locked.txt
+chmod 000 data1/locked.txt
+nano collector
+chmod +x collector
+./collector
 ```
 
 ## Part D — Race Condition & flock
@@ -71,7 +84,23 @@ ls -l setuid_demo
 ```bash
 # init stock; run swarm several times unpatched and record final stock each time
 # add the exclusive advisory lock around the read-modify-write; re-run swarm
-<your commands>
+echo "150" > stock.txt
+touch sales_log.txt
+nano buy_beacon
+chmod +x buy_beacon
+./buy_beacon Jae 5
+./buy_beacon Jae -3
+./buy_beacon Jae abc
+./buy_beacon
+echo "150" > ../stock.txt
+./swarm
+(repeated 5 times total)
+rm buy_beacon
+nano buy_beacon   # rewrote with flock -x exclusive lock around critical section
+chmod +x buy_beacon
+echo "150" > ../stock.txt
+./swarm
+(repeated 3 times to confirm determinism)
 ```
 
 ## Part E — Backups & cron

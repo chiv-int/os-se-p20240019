@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SCRIPT_DIR="$(dirname "$0")"
+NUM_BUYERS=50
+
+for i in $(seq 1 $NUM_BUYERS); do
+    "$SCRIPT_DIR/buy_beacon" "buyer$i" 1 &
+done
+
+wait
+echo "Swarm complete. Final stock:"
+cat "$SCRIPT_DIR/../stock.txt"

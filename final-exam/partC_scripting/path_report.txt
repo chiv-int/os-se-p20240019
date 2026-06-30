@@ -1,0 +1,2 @@
+PATH=/home/se-chiv-inthera/bin:/home/se-chiv-inthera/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+/home/se-chiv-inthera/bin/greeter

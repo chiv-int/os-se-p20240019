@@ -1,0 +1,17 @@
+#!/bin/bash
+
+current_user=$(whoami)
+logged_in_count=$(who | wc -l)
+sys_uptime=$(uptime -p)
+
+messages=("Stay focused, you've got this!" "Remember to commit and push often." "HelioGrid launch is almost here!")
+
+random_index=$((RANDOM % ${#messages[@]}))
+random_message="${messages[$random_index]}"
+
+echo "=========================================="
+echo " Welcome, $current_user!"
+echo " Logged-in users right now: $logged_in_count"
+echo " System uptime: $sys_uptime"
+echo " Message of the moment: $random_message"
+echo "=========================================="

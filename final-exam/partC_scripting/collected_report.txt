@@ -1,0 +1,10 @@
+----- ../data1/info.txt -----
+Report from data1
+
+Skipping ../data1/locked.txt (missing or unreadable)
+----- ../data2/info.txt -----
+Report from data2
+
+Skipping ../data2/locked.txt (missing or unreadable)
+Skipping ../data3/info.txt (missing or unreadable)
+Skipping ../data3/locked.txt (missing or unreadable)

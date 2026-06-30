@@ -1,0 +1,35 @@
+Race condition observations — unpatched buy_beacon / swarm
+Scenario: HelioGrid Beacon, initial stock = 150, concurrent buyers = 50 (each buying 1)
+Expected correct final stock: 100
+
+Run 1: final stock = 136
+Run 2: final stock = 133
+Run 3: final stock = 132
+Run 4: final stock = 132
+Run 5: final stock = 134
+
+All five runs are inconsistent with each other and all land well above the
+correct value of 100. This confirms a classic read-modify-write (TOCTOU) race
+condition: multiple buy_beacon processes read the same current_stock value
+from stock.txt before any of them have written back their decremented result,
+so several purchases overwrite each other's updates (lost update problem) —
+the stock ends up higher than it should because not every successful
+"purchase" actually subtracted from the value the next reader saw.
+
+Additional evidence of the race: several runs show shell errors like
+"./buy_beacon: line 24: [: : integer expression expected" and corresponding
+"Purchase failed: not enough stock ... (available )" messages with a blank
+available value — this happens when one process reads stock.txt at the exact
+moment another process is mid-write, catching a transiently empty/partial
+file content.
+
+This will be fixed in D3 by wrapping the read-modify-write critical section
+in a single exclusive advisory lock (flock), ensuring only one process can
+read and update stock.txt at a time.
+
+Patched runs (with flock -x exclusive lock):
+Run 1: final stock = 100
+Run 2: final stock = 100
+Run 3: final stock = 100
+All patched runs are consistent and correct. The exclusive lock serializes
+access to the critical section, eliminating the lost-update race entirely.

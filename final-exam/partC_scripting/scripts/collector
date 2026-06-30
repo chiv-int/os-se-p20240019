@@ -1,0 +1,23 @@
+#!/bin/bash
+
+directories=("../data1" "../data2" "../data3")
+candidate_files=("info.txt" "locked.txt")
+report_file="../collected_report.txt"
+
+> "$report_file"  # clear/create the report
+
+for dir in "${directories[@]}"; do
+    for fname in "${candidate_files[@]}"; do
+        filepath="$dir/$fname"
+        if [ -e "$filepath" ] && [ -r "$filepath" ]; then
+            echo "----- $filepath -----" >> "$report_file"
+            cat "$filepath" >> "$report_file"
+            echo "" >> "$report_file"
+        else
+            echo "Skipping $filepath (missing or unreadable)" >> "$report_file"
+        fi
+    done
+done
+
+echo "Collection complete. Report saved to $report_file"
+cat "$report_file"
