@@ -1,0 +1,18 @@
+-rw------- 1 se-chiv-inthera se-chiv-inthera 27 Jun 30 13:38 private_notes.txt
+drwx--x--x 2 se-chiv-inthera se-chiv-inthera 4096 Jun 30 13:38 shared_dir
+  File: private_notes.txt
+  Size: 27        	Blocks: 8          IO Block: 4096   regular file
+Device: 252,0	Inode: 47348859    Links: 1
+Access: (0600/-rw-------)  Uid: ( 1122/se-chiv-inthera)   Gid: ( 1124/se-chiv-inthera)
+Access: 2026-06-30 13:38:49.577645140 +0700
+Modify: 2026-06-30 13:38:49.577645140 +0700
+Change: 2026-06-30 13:39:13.571450468 +0700
+ Birth: 2026-06-30 13:38:49.577645140 +0700
+  File: shared_dir
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 252,0	Inode: 47348857    Links: 2
+Access: (0711/drwx--x--x)  Uid: ( 1122/se-chiv-inthera)   Gid: ( 1124/se-chiv-inthera)
+Access: 2026-06-30 13:38:54.008609168 +0700
+Modify: 2026-06-30 13:38:49.575645156 +0700
+Change: 2026-06-30 13:39:05.181518506 +0700
+ Birth: 2026-06-30 13:38:49.573645173 +0700
