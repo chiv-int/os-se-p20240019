@@ -1,0 +1,18 @@
+#!/bin/bash
+
+output_file="$1"
+TOKEN="SEALTAG"
+today=$(date '+%Y-%m-%d')
+marker="${TOKEN}_${today}"
+
+if [ -z "$output_file" ]; then
+    echo "Usage: timed_job <output_file>"
+    exit 1
+fi
+
+if [ -f "$output_file" ] && grep -q "$marker" "$output_file"; then
+    echo "Skipped: $marker already present in $output_file at $(date '+%Y-%m-%d %H:%M:%S')" >> "$output_file"
+    exit 0
+fi
+
+echo "timed_job ran at $(date '+%Y-%m-%d %H:%M:%S') [$marker]" >> "$output_file"

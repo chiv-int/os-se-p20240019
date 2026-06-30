@@ -2,12 +2,12 @@
 
 <!-- ===== COVER SHEET — required first section. Fill EVERY line. ===== -->
 ```
-Student name:
-Student ID:
-Server username:
-Exam scenario value (COMPANY / PRODUCT):
-Date & start time:
-AI assistant used (name/none):
+Student name: Chiv Inthera
+Student ID: p20240019
+Server username: se-chiv-inthera
+Exam scenario value (COMPANY / PRODUCT): HelioGrid / Beacon
+Date & start time: 2026-06-30, 1:30 PM (approx)
+AI assistant used (name/none): Claude
 ```
 
 > Exact commands per part are in `commands.md`. Live-curveball answers are in `live_mods.md`.
@@ -24,10 +24,12 @@ AI assistant used (name/none):
 
 **Written (one short answer)**
 
-- **Why does a worker thread's joined result reach the main thread, but a forked
-  child's value would not?**
-  <threads share one address space (joined value read from shared memory); a forked
-  child runs in a copied address space, so its changes never reach the parent>
+- A worker thread created with pthread_create shares the same address space as
+the main thread, so when it calls pthread_exit() with a pointer to heap
+memory, pthread_join() in main can directly read that same memory. A forked
+child gets its own separate copy of memory (copy-on-write), so the parent
+cannot directly read any value the child computes without explicit IPC
+(pipes, shared memory, etc).
 
 **Anything not completed:** <none / ...>
 
@@ -44,6 +46,7 @@ AI assistant used (name/none):
 - **Translate your private file's final octal mode into the 9-char symbolic string**
   (e.g. `600` → `rw-------`).
   octal `<NNN>` → `<rwx-style>`
+600 → rw-------
 
 **Anything not completed:** <none / ...>
 
@@ -57,10 +60,10 @@ AI assistant used (name/none):
 
 **Written (one short answer)**
 
-- **Why did `greeter` fail to run by name before you added your `bin` directory to
-  PATH?**
-  <the shell only searches directories listed in $PATH; adding ~/bin let it resolve the
-  bare name `greeter`>
+- Before adding ~/bin to PATH, bash only searches the directories listed in
+$PATH when a command is typed by name. Since ~/bin wasn't in that list, the
+shell couldn't find greeter even though the file existed and was executable
+— it would only run via an explicit path like ./greeter.
 
 **Anything not completed:** <none / ...>
 
@@ -74,11 +77,10 @@ AI assistant used (name/none):
 
 **Written (one short answer)**
 
-- **Why did the unpatched `swarm` sometimes leave more stock than the correct final
-  value (with `<INITIAL_STOCK>` stock and `<SWARM_SIZE>` concurrent buyers)?**
-  <concurrent buyers read the same stale stock (lost update), so some decrements
-  overwrote each other — fewer than expected applied>
-
+- The unpatched swarm allowed multiple buy_beacon processes to read the same
+current_stock value before any of them wrote back their decrement. When one
+process's write overwrote another's, some decrements were lost, leaving
+stock higher than the correct value of 100.
 **Anything not completed:** <note here if the race was hard to reproduce — D3's lock is
 what's graded>
 
@@ -93,7 +95,9 @@ what's graded>
 **Written (one short answer)**
 
 - **Archiving vs compression — which one actually shrank the bytes, and why?**
-  <tar archives (bundles) many files into one; gzip/compression shrinks bytes —
-  compression reduced the size>
+  Compression (the gzip -z flag) is what actually shrinks the bytes —
+archiving (tar alone) just bundles files into one container without
+reducing size. The size reduction comes entirely from gzip's compression
+algorithm finding and encoding redundancy in the data.
 
 **Anything not completed:** <none / ...>

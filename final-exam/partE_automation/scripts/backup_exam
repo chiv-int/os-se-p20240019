@@ -1,0 +1,13 @@
+#!/bin/bash
+
+EXAM_DIR="/home/se-chiv-inthera/os-se-p20240019/final-exam"
+BACKUP_DEST_DIR="/home/se-chiv-inthera/exam-backups"
+
+mkdir -p "$BACKUP_DEST_DIR"
+
+timestamp=$(date '+%Y%m%d_%H%M%S')
+archive_path="$BACKUP_DEST_DIR/final-exam-$timestamp.tar.gz"
+
+tar -czf "$archive_path" -C "$(dirname "$EXAM_DIR")" "$(basename "$EXAM_DIR")"
+
+echo "Backup created: $archive_path"

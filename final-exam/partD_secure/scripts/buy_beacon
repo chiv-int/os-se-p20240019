@@ -5,6 +5,7 @@ STOCK_FILE="$SCRIPT_DIR/../stock.txt"
 LOG_FILE="$SCRIPT_DIR/../sales_log.txt"
 LOCK_FILE="$SCRIPT_DIR/../stock.lock"
 STUDENT_ID="p20240019"
+PURCHASE_CAP=4
 
 buyer="$1"
 qty="$2"
@@ -16,6 +17,11 @@ fi
 
 if ! [[ "$qty" =~ ^[0-9]+$ ]] || [ "$qty" -le 0 ]; then
     echo "Error: quantity must be a positive integer."
+    exit 1
+fi
+
+if [ "$qty" -gt "$PURCHASE_CAP" ]; then
+    echo "Error: order rejected — quantity $qty exceeds per-buyer cap of $PURCHASE_CAP."
     exit 1
 fi
 

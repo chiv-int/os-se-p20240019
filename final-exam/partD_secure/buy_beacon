@@ -35,3 +35,7 @@ fi
 
 ) 200>"$LOCK_FILE"
 
+if [ "$1" -gt 4 ]; then
+    echo "Order rejected: Per-buyer cap of 4 exceeded."
+    exit 1
+fi

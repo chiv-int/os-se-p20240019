@@ -1,0 +1,79 @@
+=== CRONTAB ===
+# Lab10 GRADED session job - fires once at 2:30 PM on 2026-06-16 (lab session)
+30 14 16 6 * /home/se-chiv-inthera/bin/lab_session_job >> /home/se-chiv-inthera/os-lab-automation/logs/cron_session_job.log 2>&1
+# Lab10 GRADED deadline job - fires once at 2:30 PM on 2026-06-22 (before deadline)
+30 14 22 6 * /home/se-chiv-inthera/bin/deadline_job >> /home/se-chiv-inthera/os-lab-automation/logs/cron_deadline_job.log 2>&1
+
+* * * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/timed_job /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/cron_recurring.log
+35 14 * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/timed_job /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/cron_oneshot.log
+
+*/5 * * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/backup_exam >> /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/backup_exam.log 2>&1
+0 16 * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/backup_exam >> /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/backup_exam.log 2>&1
+25 14 * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/backup_exam >> /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/backup_exam.log 2>&1
+26 14 * * * /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/scripts/backup_exam >> /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/backup_exam.log 2>&1
+
+=== CRON LOGS ===
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_142001.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_142501.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_142501.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_142601.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_143001.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_143501.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_144001.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_144501.tar.gz
+Backup created: /home/se-chiv-inthera/exam-backups/final-exam-20260630_145001.tar.gz
+timed_job ran at 2026-06-30 14:35:01
+timed_job ran at 2026-06-30 14:14:01
+timed_job ran at 2026-06-30 14:15:01
+timed_job ran at 2026-06-30 14:16:01
+timed_job ran at 2026-06-30 14:17:01
+timed_job ran at 2026-06-30 14:18:01
+timed_job ran at 2026-06-30 14:19:01
+timed_job ran at 2026-06-30 14:20:01
+timed_job ran at 2026-06-30 14:21:01
+timed_job ran at 2026-06-30 14:22:01
+timed_job ran at 2026-06-30 14:23:01
+timed_job ran at 2026-06-30 14:24:01
+timed_job ran at 2026-06-30 14:25:01
+timed_job ran at 2026-06-30 14:26:01
+timed_job ran at 2026-06-30 14:27:01
+timed_job ran at 2026-06-30 14:28:01
+timed_job ran at 2026-06-30 14:29:01
+timed_job ran at 2026-06-30 14:30:01
+timed_job ran at 2026-06-30 14:31:01
+timed_job ran at 2026-06-30 14:32:01
+timed_job ran at 2026-06-30 14:33:01
+timed_job ran at 2026-06-30 14:34:01
+timed_job ran at 2026-06-30 14:35:01
+timed_job ran at 2026-06-30 14:36:01
+timed_job ran at 2026-06-30 14:37:01
+timed_job ran at 2026-06-30 14:38:01
+timed_job ran at 2026-06-30 14:39:01
+timed_job ran at 2026-06-30 14:40:01
+timed_job ran at 2026-06-30 14:41:01
+timed_job ran at 2026-06-30 14:42:01
+timed_job ran at 2026-06-30 14:43:01
+timed_job ran at 2026-06-30 14:44:01
+timed_job ran at 2026-06-30 14:45:01
+timed_job ran at 2026-06-30 14:46:01
+timed_job ran at 2026-06-30 14:47:01
+timed_job ran at 2026-06-30 14:48:01
+timed_job ran at 2026-06-30 14:49:01
+timed_job ran at 2026-06-30 14:50:01 [SEALTAG_2026-06-30]
+Skipped: SEALTAG_2026-06-30 already present in /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/cron_recurring.log at 2026-06-30 14:51:01
+Skipped: SEALTAG_2026-06-30 already present in /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/cron_recurring.log at 2026-06-30 14:52:01
+Skipped: SEALTAG_2026-06-30 already present in /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/cron_recurring.log at 2026-06-30 14:53:01
+timed_job ran at 2026-06-30 14:50:18 [SEALTAG_2026-06-30]
+Skipped: SEALTAG_2026-06-30 already present in /home/se-chiv-inthera/os-se-p20240019/final-exam/partE_automation/logs/idempotent_test.log at 2026-06-30 14:50:18
+
+=== EXAM BACKUPS ===
+total 184K
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:18 final-exam-20260630_141814.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:20 final-exam-20260630_142001.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:25 final-exam-20260630_142501.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:26 final-exam-20260630_142601.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:30 final-exam-20260630_143001.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 19K Jun 30 14:35 final-exam-20260630_143501.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 20K Jun 30 14:40 final-exam-20260630_144001.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 20K Jun 30 14:45 final-exam-20260630_144501.tar.gz
+-rw-rw-r-- 1 se-chiv-inthera se-chiv-inthera 21K Jun 30 14:50 final-exam-20260630_145001.tar.gz

@@ -114,5 +114,26 @@ echo "150" > ../stock.txt
 #     crontab: run backup_exam on a short interval AND once at exactly 16:00 today
 #     then: ls ~/exam-backups
 # capture crontab -l + both logs + the ~/exam-backups listing into cron_report.txt
-<your commands>
+mkdir -p sample_project/src sample_project/docs
+echo "print('hello HelioGrid')" > sample_project/src/main.py
+echo "# Sample project docs" > sample_project/docs/notes.md
+nano backup_project
+chmod +x backup_project
+./backup_project
+sleep 2
+./backup_project
+sleep 2
+./backup_project
+sleep 2
+./backup_project
+nano timed_job
+chmod +x timed_job
+pwd
+crontab -e
+crontab -l
+nano backup_exam
+chmod +x backup_exam
+./backup_exam
+crontab -e
+crontab -l
 ```
